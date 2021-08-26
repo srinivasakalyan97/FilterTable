@@ -13,8 +13,10 @@ export class DropdownfilterComponent implements OnInit {
   @Input('filter_values') arr : any;
   @Input('attri') attribute : any;
   @Output() messageEvent = new EventEmitter<any>();
+  isChecked : boolean
 
   captureValues(event){
+    this.isChecked = !this.isChecked
     this.messageEvent.emit(event)
   }
 

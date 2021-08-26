@@ -4,12 +4,14 @@ import { FilterApply } from './filterapplication'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DropdownfilterComponent } from './components/dropdownfilter/dropdownfilter.component';
+import { FilterRepeated } from './filterrepeated';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilterApply,
-    DropdownfilterComponent
+    DropdownfilterComponent,
+    FilterRepeated
   ],
   imports: [
     BrowserModule,

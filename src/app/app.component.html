@@ -6,13 +6,13 @@
       <th>ID</th>
       <th>Name</th>
       <th>City 
-        <app-dropdownfilter [filter_values]="select_city" [attri]="city_attribute" (messageEvent)="captureValues($event)"></app-dropdownfilter>
+        <app-dropdownfilter [filter_values]="resultant" [attri]="city_attribute" (messageEvent)="captureValues($event)"></app-dropdownfilter>
     </th>
       <th>Dept
-        <app-dropdownfilter [filter_values]="select_dept" [attri]="dept_attribute" (messageEvent)="captureValues($event)"></app-dropdownfilter>
+        <app-dropdownfilter [filter_values]="resultant" [attri]="dept_attribute" (messageEvent)="captureValues($event)"></app-dropdownfilter>
       </th>
       <th>Floor
-        <app-dropdownfilter [filter_values]="select_floor" [attri]="floor_attribute" (messageEvent)="captureValues($event)"></app-dropdownfilter>
+        <app-dropdownfilter [filter_values]="resultant" [attri]="floor_attribute" (messageEvent)="captureValues($event)"></app-dropdownfilter>
       </th>
       <th>Mail ID</th>
     </tr>

@@ -3,9 +3,9 @@
       
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <div *ngFor="let c of arr">
+      <div *ngFor="let c of arr | filterRepeated : {sort_by:attribute}">
         <label for="{{c[attribute]}}">
-          <input type="checkbox" class="{{attribute}}" id="{{c[attribute]}}" (change)="captureValues($event)" name="{{c[attribute]}}" value="{{c[attribute]}}">
+          <input type="checkbox" [checked]="isChecked" class="{{attribute}}" id="{{c[attribute]}}" (change)="captureValues($event)" name="{{c[attribute]}}" value="{{c[attribute]}}">
           {{c[attribute]}}
         </label><br>
       </div>
