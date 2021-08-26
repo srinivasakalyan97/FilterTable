@@ -49,10 +49,12 @@ export class AppComponent {
     }
   }
 
-  select_city = [{"e_city":"NYC"},{"e_city":"SF"},{"e_city":"LA"},{"e_city":"WA"},{"e_city":"SA"},{"e_city":"LA"},{"e_city":"ON"}]
+  select_city = [{"e_city":"NYC"},{"e_city":"SF"},{"e_city":"LA"},{"e_city":"WA"},{"e_city":"SA"},{"e_city":"ON"}]
   select_dept = [{"e_dept":"IT"},{"e_dept":"Finance"},{"e_dept":"Admin"}]
   select_floor = [{"e_floor":"1"},{"e_floor":"2"},{"e_floor":"3"}]
-
+  city_attribute = "e_city"
+  dept_attribute = "e_dept"
+  floor_attribute = "e_floor"
   products = [{"e_id":100,"e_name":"Shawn","email":"Shawn.chen@addept.com","e_city":"NYC","e_dept":"IT","e_floor":"1"},
   {"e_id":101,"e_name":"Ron","email":"Ron.chen@addept.com","e_city":"SF","e_dept":"Finance","e_floor":"2"},   
   {"e_id":102,"e_name":"Micheal","email":"Micheal.chen@addept.com","e_city":"LA","e_dept":"Admin","e_floor":"3"},
@@ -82,6 +84,8 @@ export class AppComponent {
   ];
 
   captureValues(event){
+    console.log("capture app component ",event);
+    
     if(event.target.checked){
       this.resultant = []
       this.filter[event.target.className][event.target.value] = true

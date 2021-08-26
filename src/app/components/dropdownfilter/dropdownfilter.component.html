@@ -1,0 +1,13 @@
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <div *ngFor="let c of arr">
+        <label for="{{c[attribute]}}">
+          <input type="checkbox" class="{{attribute}}" id="{{c[attribute]}}" (change)="captureValues($event)" name="{{c[attribute]}}" value="{{c[attribute]}}">
+          {{c[attribute]}}
+        </label><br>
+      </div>
+    </div>
+  </div>

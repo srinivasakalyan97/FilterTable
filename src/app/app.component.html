@@ -5,49 +5,14 @@
     <tr>
       <th>ID</th>
       <th>Name</th>
-      <th>City <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <div *ngFor="let c of select_city">
-            <label for="{{c.e_city}}">
-              <input type="checkbox" class="e_city" id="{{c.e_city}}" (change)="captureValues($event)" name="{{c.e_city}}" value="{{c.e_city}}">
-              {{c.e_city}}
-            </label><br>
-          </div>
-        </div>
-      </div>
+      <th>City 
+        <app-dropdownfilter [filter_values]="select_city" [attri]="city_attribute" (messageEvent)="captureValues($event)"></app-dropdownfilter>
     </th>
       <th>Dept
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <div *ngFor="let d of select_dept">
-              <label for="{{d.e_dept}}">
-                <input type="checkbox" class="e_dept" id="{{d.e_dept}}" (change)="captureValues($event)" name="{{d.e_dept}}" value="{{d.e_dept}}">
-                {{d.e_dept}}
-              </label><br>
-            </div>
-          </div>
-        </div>
+        <app-dropdownfilter [filter_values]="select_dept" [attri]="dept_attribute" (messageEvent)="captureValues($event)"></app-dropdownfilter>
       </th>
       <th>Floor
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <div *ngFor="let f of select_floor">
-              <label for="{f.e_floor}}">
-                <input type="checkbox" class="e_floor" id="{{f.e_floor}}" (change)="captureValues($event)" name="{{f.e_floor}}" value="{{f.e_floor}}">
-                {{f.e_floor}}
-              </label><br>
-            </div>
-          </div>
-        </div>
+        <app-dropdownfilter [filter_values]="select_floor" [attri]="floor_attribute" (messageEvent)="captureValues($event)"></app-dropdownfilter>
       </th>
       <th>Mail ID</th>
     </tr>
